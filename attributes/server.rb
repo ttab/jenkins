@@ -63,7 +63,8 @@ default['jenkins']['server']['war_checksum'] = nil
 
 default['jenkins']['server']['port'] = 8080
 default['jenkins']['server']['host'] = node['fqdn']
-default['jenkins']['server']['url']  = "http://#{default['jenkins']['server']['host']}:#{default['jenkins']['server']['port']}"
+default['jenkins']['server']['prefix'] = ''
+default['jenkins']['server']['url']  = "http://#{node['jenkins']['server']['host']}:#{node['jenkins']['server']['port']}#{node['jenkins']['server']['prefix']}"
 
 default['jenkins']['server']['plugins'] = []
 default['jenkins']['server']['jvm_options'] = nil
