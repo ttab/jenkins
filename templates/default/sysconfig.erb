@@ -94,4 +94,5 @@ JENKINS_HANDLER_IDLE="20"
 # Pass arbitrary arguments to Jenkins.
 # Full option list: java -jar jenkins.war --help
 #
-JENKINS_ARGS=""
+JENKINS_ARGS='--prefix="<%= node['jenkins']['server']['prefix'] %>"'
+  
